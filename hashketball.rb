@@ -186,13 +186,13 @@ def player_stats(player_name)
     next unless attribute == :player
   game_hash[location][attribute].each do |player|
     next unless player[:player_name] == player_name
-      new_hash = player
+      new_hash = player.delete_if do |k, v|
+        k == :player_name
 end
 end
-
 end
 end
-binding.pry
+end
 end
   
 
