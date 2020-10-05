@@ -196,15 +196,20 @@ end
 end
 
 def big_shoe_rebounds
-  game_hash.collect do |location, team_data|
-    team_data.collect do |attribute, value|
+  biggest = 0
+  rebounds = 0
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, value|
       team_data[:players].each do |player_hash|
-     return player_hash[:shoe]
-    
-    end
+     size = player_hash[:shoe]
+     if size > biggest
+       rebounds  = player_hash[:rebounds]
+     end
+   end
   end
+  rebounds
 end
-end
+ 
 
 
 
