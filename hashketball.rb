@@ -202,6 +202,7 @@ def big_shoe_rebounds
       player_hash[:shoe].collect do |biggest_shoe|
       binding.pry
     end
+    end
   end
 end
 end
