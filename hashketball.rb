@@ -179,22 +179,22 @@ end
 end
 end
   
-def player_stats(player_name)
-  new_hash = {}
-  game_hash.collect do |location, team_data|
-  team_data.each do |attribute, data|
-    next unless attribute == :player
-  game_hash[location][attribute].each do |player|
-    next unless player[:player_name] == player_name
-      new_hash = player.delete_if do |k, v|
-        k == :player_name
-
-end
-end
-end
-end
-new_hash
-end
+def player_stats(name)
+  game_hash.each do |location , team|
+    team.each do |attribute, value|
+        if attribute == :players
+         value.each do |data|
+           if data[:player_name] == name
+             stats = {}
+             stats = data
+             stats.delete(:player_name)
+             return stats
+            end 
+          end  
+        end 
+      end 
+  end 
+end 
 
 
 
