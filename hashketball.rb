@@ -184,9 +184,11 @@ def player_stats(player_name)
   game_hash.collect do |location, team_data|
   team_data.each do |attribute, data|
     next unless attribute == :player
-    binding.pry
+  game_hash[location][attribute].each do |player|
+    if player[:player_name] == player_name
+end
     
-
+binding.pry
 end
 end
 end
