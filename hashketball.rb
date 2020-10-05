@@ -183,7 +183,7 @@ def player_stats(name)
   game_hash.each do |location , team|
     team.each do |attribute, value|
         if attribute == :players
-         value.each do |data|
+         value.each do |player|
            if data[:player_name] == name
              stats = {}
              stats = data
