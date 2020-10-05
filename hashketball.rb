@@ -181,19 +181,20 @@ end
   
 def player_stats(name)
   game_hash.each do |location , team|
-    team.each do |attribute, value|
-        if attribute == :players
-         value.each do |player|
-           if player[:player_name] == name
-             stats = {}
-             stats = player
-             return stats
-            end 
-          end  
-        end 
-      end 
-  end 
+  team.each do |attribute, value|
+  if attribute == :players
+  value.each do |player|
+  if player[:player_name] == name
+  stats = {}
+  stats = player
+  return stats
+end 
+end  
+end 
+end 
+end 
 end
+
 
 
 
