@@ -186,7 +186,7 @@ def player_stats(player_name)
     next unless attribute == :player
   game_hash[location][attribute].each do |player|
     if player[:player_name] == player_name
-      
+      new_hash = player
 end
 end
 binding.pry
