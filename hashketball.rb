@@ -187,7 +187,6 @@ def player_stats(name)
            if data[:player_name] == name
              stats = {}
              stats = data
-             stats.delete(:player_name)
              return stats
             end 
           end  
