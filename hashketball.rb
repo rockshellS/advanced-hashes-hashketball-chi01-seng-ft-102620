@@ -189,9 +189,10 @@ def player_stats(player_name)
       new_hash = player
 end
 end
+
+end
+end
 binding.pry
-end
-end
 end
   
 
