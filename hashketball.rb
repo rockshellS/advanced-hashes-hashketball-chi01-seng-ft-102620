@@ -170,19 +170,48 @@ end
 end
 
 def player_numbers(team_name)
- array = game_hash.each do |location, team_data|
-   if team_data[:team_name] == team_name
-  team_data[:players].collect do |player_hash|
+  game_hash.each do |location, team_data|
+  if team_data[:team_name] == team_name
   return team_data[:players].collect do |player_hash|
-    end
+  player_hash[:number]
 end
 end
 end
 end
   
+def player_stats(name)
+  game_hash.each do |location , team|
+  team.each do |attribute, value|
+  if attribute == :players
+  value.each do |player|
+  if player[:player_name] == name
+  stats = {}
+  stats = player
+  return stats
+end 
+end  
+end 
+end 
+end 
+end
 
-
-
+def big_shoe_rebounds
+  biggest_shoe = 0
+  rebound = 0
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, value|
+      team_data[:players].each do |player_hash|
+     if player_hash[:shoe] > biggest_shoe
+       biggest_shoe = player_hash[:shoe]
+       rebound = player_hash[:rebounds]
+     end
+     end
+   end
+ end
+ rebound
+ end
+ 
+ 
 
 
 
