@@ -203,7 +203,7 @@ def big_shoe_rebounds
       team_data[:players].each do |player_hash|
      size = player_hash[:shoe]
      if size > biggest
-       rebounds  = player_hash[:rebounds]
+       rebounds = player_hash[:rebounds]
        binding.pry
      end
      end
