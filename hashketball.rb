@@ -198,7 +198,7 @@ end
 def big_shoe_rebounds
   game_hash.collect do |location, team_data|
 end
-
+end
 
 
 
